@@ -18,10 +18,6 @@ class Store {
     @action.bound toggleMusicItem(musicitem) {
         this.currentMusicItem = musicitem
     }
-    @observable cycleModel = 'cycle'
-    @action.bound toggleCycleModel(model) {
-        this.cycleModel = model
-    }
 }
 class Model {
     @observable cycleModel = 'cycle'
