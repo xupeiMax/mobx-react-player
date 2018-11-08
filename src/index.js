@@ -18,12 +18,19 @@ class Store {
     @action.bound toggleMusicItem(musicitem) {
         this.currentMusicItem = musicitem
     }
-
-}
-class Model {
     @observable cycleModel = 'cycle'
     @action.bound toggleCycleModel(model) {
         this.cycleModel = model
+    }
+}
+class Model {
+    @observable cycleModel = 'cycle'
+    @observable isplay = false
+    @action.bound toggleCycleModel(model) {
+        this.cycleModel = model
+    }
+    @action.bound togglePlay() {
+        this.isplay = !this.isplay
     }
 }
 const store = new Store()
